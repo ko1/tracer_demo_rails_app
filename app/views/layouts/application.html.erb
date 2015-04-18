@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -37,16 +37,26 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <a class="navbar-brand" href="/">arigatobook</a>
+    </nav>
 
-    <div class="container">
+    <div class="jumbotron">
+      <div class="container">
+	<p>
+	<%= image_tag 'arigatobook.png' %>
+	</p>
+	<p>
+	  Write "Thank you" "Gracias" "धन्यवाद।" "谢谢。" "ありがとう（arigato）" in your words.
+	</p>
+      </div>
+    </div>
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-9">
           <%= bootstrap_flash %>
-	  <h1>ArigatoBook</h1>
           <%= yield %>
         </div>
-        <div class="col-lg-3">
-        </div><!--/span-->
       </div><!--/row-->
 
       <footer>
