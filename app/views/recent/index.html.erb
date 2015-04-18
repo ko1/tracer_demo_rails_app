@@ -1,0 +1,12 @@
+﻿<h2>Say ありがとう! (Thank you)</h2>
+
+<%= render template: 'messages/_form' %>
+
+<h2>Recent Messages</h2>
+
+<% @messages.each do |m| %>
+  <ul>
+    <li> <%= m.message %> from <%= m.from %> to <%= m.to %> (<%= m.created_at %>)</li>
+  </ul>
+<% end %>
+
