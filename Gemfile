@@ -48,7 +48,10 @@ group :production do
   gem 'pg'
 end
 
+gem 'kaminari'
+
 gem 'gc_tracer'
 gem 'allocation_tracer'
 
-
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'

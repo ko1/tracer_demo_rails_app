@@ -4,9 +4,41 @@
 
 <h2>Recent Messages</h2>
 
-<% @messages.each do |m| %>
-  <ul>
-    <li> <%= m.message %> from <%= m.from %> to <%= m.to %> (<%= m.created_at %>)</li>
-  </ul>
-<% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Message</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @messages.each do |m| %>
+    <tr>
+      <td><%= m.from %></td>
+      <td><%= m.to %></td>
+      <td><%= m.message %></td>
+      <td><%= m.created_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @messages %>
+
+<h2>Runtime information</h2>
+
+<ul>
+  <% %w(
+    /gc_tracer
+    /gc_tracer/text
+    /allocation_tracer/
+    /allocation_tracer/allocated_count_table
+    /allocation_tracer/freed_count_table
+    /allocation_tracer/lifetime_table
+    ).each do |page| %>
+  <li><a href='<%= page %>'><%= page %></a></li>
+  <% end %>
+</ul>
 

@@ -28,7 +28,8 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        dest = params[:message][:redirect_to] || @message
+        dest = params[:redirect_to]
+        dest = dest.blank? ? messages_path : dest
         format.html { redirect_to dest, notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
       else
