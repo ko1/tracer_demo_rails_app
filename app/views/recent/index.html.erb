@@ -1,8 +1,8 @@
-﻿<h2>Say ありがとう! (Thank you)</h2>
+﻿<h2 id='say'>Say ありがとう! (Thank you)</h2>
 
 <%= render template: 'messages/_form' %>
 
-<h2>Recent Messages</h2>
+<h2 id='recent'>Recent Messages</h2>
 
 <table class="table table-striped">
   <thead>
@@ -27,7 +27,7 @@
 
 <%= paginate @messages %>
 
-<h2>Runtime information</h2>
+<h2 id='runtime_information'>Runtime information</h2>
 
 <ul>
   <% %w(
