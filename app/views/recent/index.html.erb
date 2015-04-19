@@ -1,4 +1,4 @@
-﻿<h2 id='say'>Say ありがとう! (Thank you)</h2>
+﻿<h2 id='say'>Say your arigato (thank you) to someone great!</h2>
 
 <%= render template: 'messages/_form' %>
 
@@ -19,7 +19,7 @@
       <td><%= m.from %></td>
       <td><%= m.to %></td>
       <td><%= m.message %></td>
-      <td><%= m.created_at %></td>
+      <td><%= link_to m.created_at, m %></td>
     </tr>
     <% end %>
   </tbody>

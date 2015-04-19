@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'recent#index'
   get 'recent' => 'recent#index'
 
-  resources :messages, only: [:index, :new, :create, :destroy]
+  resources :messages, only: [:index, :new, :show, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
