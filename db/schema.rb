@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418081932) do
+ActiveRecord::Schema.define(version: 20150419120813) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "from"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150418081932) do
     t.string   "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "stamp"
   end
 
 end

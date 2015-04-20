@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.ImageOption {
+	padding: 16px;
+	height:  64px;
+	background-repeat: no-repeat;
+}
+

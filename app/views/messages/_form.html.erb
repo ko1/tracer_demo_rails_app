@@ -30,6 +30,17 @@
     <%= error_span(@message[:to]) %>
   </div>
   <div class="control-group">
+    <%= f.label :stamp, :class => 'control-label' %>
+    <div class="controls">
+      <% files = Dir.glob('app/assets/images/stamp/*.{png,gif}').sort.map do |path| %>
+	  <% filename = File.basename(path) %>
+      <% end %>
+      <%= f.select :stamp, files.map.with_index{|e, i| [e, e,
+        {class: 'ImageOption', style: "background-image: url(#{image_path 'stamp/' +  e}"}]} %>
+    </div>
+    <%= error_span(@message[:message]) %>
+  </div>
+  <div class="control-group">
     <%= f.label :message, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :message, :class => 'form-control' %>
