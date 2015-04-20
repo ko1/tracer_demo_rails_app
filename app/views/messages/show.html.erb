@@ -8,6 +8,8 @@
   <dd><%= @message.from %></dd>
   <dt><strong><%= model_class.human_attribute_name(:to) %>:</strong></dt>
   <dd><%= @message.to %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:stamp) %>:</strong></dt>
+  <dd><%= image_tag(@message.stamp.blank? ? 'stamp/hanamaru02-002.gif' : "stamp/#{@message.stamp}") %></dd>
   <dt><strong><%= model_class.human_attribute_name(:message) %>:</strong></dt>
   <dd><%= @message.message %></dd>
 </dl>

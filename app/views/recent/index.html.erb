@@ -18,7 +18,7 @@
     <tr>
       <td><%= m.from %></td>
       <td><%= m.to %></td>
-      <td><div><%= image_tag p(m.stamp.blank? ? 'stamp/hanamaru02-002.gif' : "stamp/#{m.stamp}") %> <%= m.message %></td>
+      <td><div><%= image_tag m.stamp.blank? ? 'stamp/hanamaru02-002.gif' : "stamp/#{m.stamp}" %> <%= m.message %></td>
       <td><%= link_to m.created_at, m %></td>
     </tr>
     <% end %>
